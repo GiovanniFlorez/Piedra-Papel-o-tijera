@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de sesión y registro</title>
+  <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Iniciar sesión o Registrarse</h2>
+
+    <div id="formularioLogin" style="display: block;">
+      <h3>Iniciar sesión</h3>
+      <form onsubmit="event.preventDefault(); validarLogin();">
+        <label for="usuarioLogin">Usuario:</label>
+        <input type="text" id="usuarioLogin" required>
+        
+        <label for="contrasenaLogin">Contraseña:</label>
+        <input type="password" id="contrasenaLogin" required>
+        
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <div class="switch-form">
+        <p>¿No tienes una cuenta? <a href="javascript:void(0);" onclick="mostrarRegistro()">Regístrate aquí</a></p>
+      </div>
+    </div>
+
+    <div id="formularioRegistro">
+      <h3>Registrarse</h3>
+      <form onsubmit="event.preventDefault(); registrar();">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" required>
+        
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" required>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" required>
+        
+        <button type="submit">Registrarse</button>
+      </form>
+      <div class="switch-form">
+        <p>¿Ya tienes una cuenta? <a href="javascript:void(0);" onclick="mostrarLogin()">Inicia sesión aquí</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="loginscript.js"></script>
+</body>
+</html>
